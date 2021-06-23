@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>AspectJ tutoriall</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!--
+Ramayana CSS Template
+https://templatemo.com/tm-529-ramayana
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  </head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Main -->
+        <div id="main">
+          <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+              <div class="logo">
+                <a href="index.html">AspectJ</a>
+                <a class="subtittle">Tutorial de AspectJ</a>
+              </div>
+            </header>
+
+            <!-- Banner -->
+            <section class="main-banner">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="banner-content">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="banner-caption">
+                            <h2>¿Que es AspectJ?</h2>
+                            <p>AspectJ es una extensión de AOP para Java. Fue creado en PARC(Palo Alto Research Center) por el equipo Xerox PARC, liderado por Gregor Kiczales. Ampliamente usado como estándar de la POA. Se caracteriza por su simplicidad y usabilidad.</p>
+                            <div class="primary-button">
+                              <a href="https://es.wikipedia.org/wiki/AspectJ">Read More</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Services -->
+            <section class="services">
+              <h1 class="sub">Compatibilidad</h1>
+              <h3>AspectJ es una extensión compatible de Java para facilitar el uso de aspectos por parte de los programadores de Java. Por compatible se entiende:</h3>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="service-item first-item">
+                      <div class="icon"></div>
+                      <h4>Compatibilidad base</h4>
+                      <p>Todos los programas válidos de Java deben ser programas válidos de AspectJ.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-item second-item">
+                      <div class="icon"></div>
+                      <h4>Compatibilidad de plataforma</h4>
+                      <p>Todos los programas válidos de AspectJ deben correr sobre la máquina virtual estándar de Java.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-item third-item">
+                      <div class="icon"></div>
+                      <h4>Compatibilidad de programación</h4>
+                      <p>La programación en AspectJ debe ser una extensión natural de la programación en Java.</p>
+                    </div>
+                  </div>
+                  <h3>Esta última meta fue una de las guías más importante a la hora de tomar decisiones sobre el lenguaje. Es estáticamente tipado y usa el sistema de tipos estático de Java.</h3>
+                  <img src="assets/images/compatibilidad.png" alt="">
+                  <!-- <div class="col-md-4">
+                    <div class="service-item fourth-item">
+                      <div class="icon"></div>
+                      <h4>Download Free</h4>
+                      <p>We have many free to use CSS web templates on our site for you.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-item fivth-item">
+                      <div class="icon"></div>
+                      <h4>Get in touch</h4>
+                      <p>You can get the fastest response from <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> facebook page.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-item sixth-item">
+                      <div class="icon"></div>
+                      <h4>Spread a word</h4>
+                      <p>Please tell your friends about our website. This is very helpful.</p>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </section>
+
+            <!-- Top Image -->
+            <section class="top-image">
+              <h1 class="sub">Semántica</h1>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="assets/images/HOW_IS_FORMED.png" alt="">
+                    <div class="down-content">
+                      <!-- <h4>Ante Interdum Chambray</h4> -->
+                      <p>En sí, AspectJ funciona extiendiendo a Java como Base para soportar el manejo de aspectos y clases, agregando a la semántica de Java cuatro entidades principales.</p>
+                      <!-- <div class="primary-button">
+                        <a href="#">Read More</a>
+                      </div> -->
+                      <h4>
+                        Los puntos de enlace (Join Points)
+                      </h4>
+                        <p>Son puntos bien definidos en la ejecución de un programa, entre ellos podemos citar llamadas a métodos y accesos a atributos.</p>
+                      <h4>
+                        Los cortes (Point Cuts)
+                      </h4>
+                        <p>Agrupan puntos de enlace y permiten exponer el contexto en ejecución de dichos puntos. Existen cortes primitivos y también definidos por el usuario.</p>
+                      <h4>
+                        Los avisos (Advices)
+                      </h4>
+                        <p>Son acciones que se ejecutan en cada punto de enlace incluido en un corte. Los avisos tienen acceso a los valores expuestos por el corte. Las tres entidades anteriores son dinámicas porque permiten definir comportamiento adicional que actuará en tiempo de ejecución.</p>
+                      <h4>
+                        Las introducciones y declaraciones (Inter-Type Declarations)
+                      </h4>
+                        <p>Permiten cambiar la estructura de clases de un programa agregando o extendiendo interfaces y clases con nuevos atributos, constructores o métodos.
+                          Esta última entidad es estática porque afecta la signatura estática del programa.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h1 class="sub">Semantica De Declaración</h1>
+              <code>
+                [ privileged ] Modifiers aspect Id [ extends Type ] [ implements TypeList ] [ Per Clause ] { Body }
+              </code>
+            </section>
+
+            <!-- Left Image -->
+            <section class="left-image">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/left-image.jpg" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="right-content">
+                      <h4>Ante Interdum Raclette</h4>
+                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.<br><br>Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put bird brooklyn</p>
+                      <div class="primary-button">
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Right Image -->
+            <section class="right-image">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="left-content">
+                      <h4>Ante Interdum Raclette</h4>
+                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.<br><br>Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put bird brooklyn</p>
+                      <div class="primary-button">
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <img src="assets/images/right-image.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+
+      <!-- Sidebar -->
+        <div id="sidebar">
+
+          <div class="inner">
+
+            <!-- Search Box -->
+            <section id="search" class="alt">
+              <form method="get" action="#">
+                <input type="text" name="search" id="search" placeholder="Search..." />
+              </form>
+            </section>
+              
+            <!-- Menu -->
+            <nav id="menu">
+              <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="simple_page.html">Simple Page</a></li>
+                <li><a href="shortcodes.html">Shortcodes</a></li>
+                <li>
+                  <span class="opener">Dropdown One</span>
+                  <ul>
+                    <li><a href="#">First Sub Menu</a></li>
+                    <li><a href="#">Second Sub Menu</a></li>
+                    <li><a href="#">Third Sub Menu</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="opener">Dropdown Two</span>
+                  <ul>
+                    <li><a href="#">Sub Menu #1</a></li>
+                    <li><a href="#">Sub Menu #2</a></li>
+                    <li><a href="#">Sub Menu #3</a></li>
+                  </ul>
+                </li>
+                <!-- <li><a href="https://www.google.com">External Link</a></li> -->
+                <li><a href="https://github.com/ferestrepoca/paradigmas-de-programacion">View on GitHub</a></li>
+                <li><a href="https://github.com/ferestrepoca/paradigmas-de-programacion/zipball/master">Download .zip</a></li>
+                <li><a href="https://github.com/ferestrepoca/paradigmas-de-programacion/tarball/master">Download .tar.gz</a></li>
+              </ul>
+            </nav>
+
+            <!-- Featured Posts -->
+            <div class="featured-posts">
+              <div class="heading">
+                <h2>Featured Posts</h2>
+              </div>
+              <div class="owl-carousel owl-theme">
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="assets/images/featured_post_01.jpg" alt="featured one">
+                    <p>Aliquam egestas convallis eros sed gravida. Curabitur consequat sit.</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="assets/images/featured_post_01.jpg" alt="featured two">
+                    <p>Donec a scelerisque massa. Aliquam non iaculis quam. Duis arcu turpis.</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="featured-item">
+                    <img src="assets/images/featured_post_01.jpg" alt="featured three">
+                    <p>Suspendisse ac convallis urna, vitae luctus ante. Donec sit amet.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+              <p class="copyright">Copyright &copy; 2019 Company Name
+              <br>Designed by <a rel="nofollow" href="https://www.facebook.com/templatemo">Template Mo</a></p>
+            </footer>
+
+          </div>
+        </div>
+
+    </div>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/transition.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+
+  </body>
+
+</html>
