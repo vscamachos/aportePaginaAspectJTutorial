@@ -237,13 +237,17 @@ https://templatemo.com/tm-529-ramayana
                 <div class="row">
                   <div class="col-md-12">
                     <div class="down-content">
-                      <h3 class="h3sub"><a id="aspect"></a>Aspect</h3>
+                        <div id="#aspect">
+                            <h3 class="h3sub"></a>Aspect</h3>
+                        </div>
 
                             <p>Es la unidad central de Aspectj, se puede colocar en un archivo .aj.Contiene el código que expresa las reglas de los crosscutting.Un aspecto es una unidad de modularización en AOP como las clases son en OOP.</p>
 
                             <div class="highlight highlight-source-aspectj"> <script src="https://gist.github.com/jsbecerrab/d1fdfbd41f0402231fa46053d3920462.js"></script></div>
+                        <div id="#pointcut">
+                            <h3 class="h3sub">PointCut</h3>
+                        </div>
 
-                      <h3 class="h3sub">PointCut</h3>
 
                             <p>Una palabra del lenguaje que selecciona los puntos interesantes (join points) y colecta el contexto de este punto.
                               Selecciona puntos interesantes de la ejecución.
@@ -260,8 +264,10 @@ https://templatemo.com/tm-529-ramayana
 
                             <h4>PointCut Pattern </h4>
                             <img src="assets/images/point_cut.PNG">
+                        <div id="#advice">
+                            <h3 class="h3sub">Advice</h3>
+                        </div>
 
-                      <h3 class="h3sub">Advice</h3>
                             <p>Código que se ejecutará cuando se llegue al pointcut este se puede definir de diferentes maneras. Existen tres tipos de advice:</p>
                             <ul>
                               <li>before()</li>
@@ -306,7 +312,9 @@ https://templatemo.com/tm-529-ramayana
                                   <code>thisJoinPointStaticPart</code> : equivalente a <code>thisJoinPoint.getStaticPart()</code> pero consume menos recursos.
                                   <code>thisEnclosingJoinPointStaticPart</code> : la parte estatica de la dinamica que encierra el join point.</p>
 
-                      <h3 class="h3sub">Sintaxis de las notaciones</h3>
+                        <div id="#sintaxisNotaciones">
+                            <h3 class="h3sub">Sintaxis de las notaciones</h3>
+                        </div>
 
                                   <h4>Aspect</h4>
                                   <p><img src="https://raw.githubusercontent.com/seradiazpin/paradigmas-de-programacion/master/poa/tutorial/images/aspect.png" alt="aspect"></p>
@@ -322,8 +330,10 @@ https://templatemo.com/tm-529-ramayana
 
                                   <h4>Advice around</h4>
                                   <p><img src="https://raw.githubusercontent.com/seradiazpin/paradigmas-de-programacion/master/poa/tutorial/images/around.png" alt="aspect"></p>
+                        <div id="#java8">
+                            <h3 class="h3sub">Java 8</h3>
+                        </div>
 
-                      <h3 class="h3sub">Java 8</h3>
                                   <h4>Streams </h4>
                                   <p>Estos son nuevas abtracciones que nos permiten tener flujos de datos sobre los cuales aplicaremos diversas operaciones, ya sea desde filtros hasta operaciones complejas como implementar un Map-Reduce</p>
                                   <div><script src="https://gist.github.com/jsbecerrab/284015e9dd458b198875b07d157e8d43.js"></script></div>
@@ -412,7 +422,7 @@ https://templatemo.com/tm-529-ramayana
                     <li><a href="#aspect">Aspect</a></li>
                     <li><a href="#pointcut">PointCut</a></li>
                     <li><a href="#advice">Advice</a></li>
-                    <li><a href="#sintaxisAnotaciones">Sintaxis de las Anotaciones</a></li>
+                    <li><a href="#sintaxisNotaciones">Sintaxis de las notaciones</a></li>
                     <li><a href="#java8">Java 8</a></li>
                   </ul>
                 </li>
