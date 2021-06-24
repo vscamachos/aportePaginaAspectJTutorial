@@ -103,6 +103,7 @@ https://templatemo.com/tm-529-ramayana
 
             <!-- Top Image -->
             <section class="top-image">
+<!--              semantica-->
               <div id="semantica">
                 <h1 class="sub">Semántica</h1>
               </div>
@@ -137,6 +138,7 @@ https://templatemo.com/tm-529-ramayana
                   </div>
                 </div>
               </div>
+<!--              Semantica De Declaración-->
               <h1 class="sub">Semantica De Declaración</h1>
               <code>
                 [ privileged ] Modifiers aspect Id [ extends Type ] [ implements TypeList ] [ Per Clause ] { Body }
@@ -149,23 +151,194 @@ https://templatemo.com/tm-529-ramayana
                     <!-- <div class="primary-button">
                       <a href="#">Read More</a>
                     </div> -->
-                    <h4>
-                      Los puntos de enlace (Join Points)
-                    </h4>
-                    <p>Son puntos bien definidos en la ejecución de un programa, entre ellos podemos citar llamadas a métodos y accesos a atributos.</p>
-                    <h4>
-                      Los cortes (Point Cuts)
-                    </h4>
-                    <p>Agrupan puntos de enlace y permiten exponer el contexto en ejecución de dichos puntos. Existen cortes primitivos y también definidos por el usuario.</p>
-                    <h4>
-                      Los avisos (Advices)
-                    </h4>
-                    <p>Son acciones que se ejecutan en cada punto de enlace incluido en un corte. Los avisos tienen acceso a los valores expuestos por el corte. Las tres entidades anteriores son dinámicas porque permiten definir comportamiento adicional que actuará en tiempo de ejecución.</p>
-                    <h4>
-                      Las introducciones y declaraciones (Inter-Type Declarations)
-                    </h4>
-                    <p>Permiten cambiar la estructura de clases de un programa agregando o extendiendo interfaces y clases con nuevos atributos, constructores o métodos.
-                      Esta última entidad es estática porque afecta la signatura estática del programa.</p>
+                    <button class="accordion"><strong>[ privileged ]</strong></button>
+                    <div class="panel">
+                      <br>
+                      <p style="color:#1C1453">Un modifier especial que, como su nombre nos lo indica, le dará privilegios al aspecto, esto significa que nos permitirá poder acceder a métodos y atributos privados de clases y aspectos externos.</p>
+                      <div class="highlight highlight-source-aspectj"><script src="https://gist.github.com/jsbecerrab/a16efb36b73a10bdeabd7bcc87725eaa.js"></script>
+                      </div>
+                    </div>
+
+                    <button class="accordion"><strong>[extends Type], [implements TypeList ]</strong></button>
+                    <div class="panel">
+                      <br>
+                      <img src="tutorial/images/extends.png">
+
+                      <p style="color:#1C1453">Un aspecto puede extender una clase, u otro aspecto abstracto y puede implementar tantos interfaces como se le indiquen. </p>
+                      <p style="color:#1C1453">La siguientes son unas reglas a tener en cuenta:</p>
+                      <ul>
+                        <li style="color:#1C1453">De un aspecto a pesar de extender una clase no se puede crear una instancia del mismo con el método new.</li>
+                        <li style="color:#1C1453" >Una clase no puede extender un aspecto.</li>
+                        <li style="color:#1C1453" >Un aspecto no puede extender un aspecto que no sea abstracto.</li>
+                      </ul>
+
+                      <script src="https://gist.github.com/jsbecerrab/c433c3563f28277a8a52e00c2a336167.js"></script>
+
+                    </div>
+                    <button class="accordion"><strong>[ Per Clause ]</strong></button>
+
+                    <div class="panel">
+                      <br>
+                      <p style="color:#1C1453">Los Aspectos originalmente se generan como singleton. Sin embargo, pueden haber varias formas de crear diversas instancias del mismo acceso, según su objeto asociado, su posición de ejecución, entre otras. Las <b>Per Clause</b> son quienes se encargan de modificar los Aspectos para poder tener más control sobre la cantidad y comportamiento de los Aspectos</p>
+                      <img src="tutorial/images/perclauses.png">
+                      <div class="highlight highlight-source-aspectj"><script src="https://gist.github.com/jsbecerrab/99c3d0cda1c4f01c10f747adc3d231d8.js"></script></div>
+                      <p style="color:#1C1453">Sin embargo, no se recomienda mezclar varios de estos métodos debido a que pueden llegar a inteferir con flujos ajenos de los distintos Aspectos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Top Image -->
+            <section class="top-image">
+              <!--              Compiladores diseñados para AspectJ-->
+              <div id="compiladores">
+                <h1 class="sub">Compiladores diseñados para AspectJ</h1>
+              </div>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="down-content">
+                      <h5>Los dos principales compiladores para AspectJ son:</h5>
+                      <ul>
+                        <li>ajc ajc parte de las herramientas soportadas por el proyecto Eclipse</li>
+                        <li>abc que es un compilador, que optimiza y es extensible, producido en aspectbench.org.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Top Image -->
+            <section class="top-image">
+              <!--Objetivos-->
+              <div id="objetivos">
+                <h1 class="sub">Objetivos</h1>
+              </div>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="down-content">
+                      <p>La intención de AspectJ es ser un LOA práctico, que provea un conjunto sólido y maduro de características orientadas a aspectos, compatible con Java para aprovechar su popularidad.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Top Image -->
+            <section class="top-image">
+              <!--Lenguaje-->
+              <div id="lenguaje">
+                <h1 class="sub">Lenguaje</h1>
+              </div>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="down-content">
+                      <h3 class="h3sub"><a id="aspect"></a>Aspect</h3>
+
+                            <p>Es la unidad central de Aspectj, se puede colocar en un archivo .aj.Contiene el código que expresa las reglas de los crosscutting.Un aspecto es una unidad de modularización en AOP como las clases son en OOP.</p>
+
+                            <div class="highlight highlight-source-aspectj"> <script src="https://gist.github.com/jsbecerrab/d1fdfbd41f0402231fa46053d3920462.js"></script></div>
+
+                      <h3 class="h3sub">PointCut</h3>
+
+                            <p>Una palabra del lenguaje que selecciona los puntos interesantes (join points) y colecta el contexto de este punto.
+                              Selecciona puntos interesantes de la ejecución.
+                              Pueden ser llamadas, ejecuciones, instanciar objetos, constructores, manejo de excepciones.</p>
+
+                            <div class="highlight highlight-source-aspectj"><script src="https://gist.github.com/jsbecerrab/b59fb3697da08d39b7fb3051cd6bed9c.js"></script></div>
+
+                            <h4>Tipos de point cuts</h4>
+
+                            <p><img src="https://raw.githubusercontent.com/seradiazpin/paradigmas-de-programacion/master/poa/tutorial/images/puntos1.png" alt="tabla de pointcut">
+                              <img src="https://raw.githubusercontent.com/seradiazpin/paradigmas-de-programacion/master/poa/tutorial/images/punto2.png" alt="tabla de pointcut"></p>
+
+                            <p><a href="https://eclipse.org/aspectj/doc/next/progguide/index.html">Mas informacion</a></p>
+
+                            <h4>PointCut Pattern </h4>
+                            <img src="assets/images/point_cut.PNG">
+
+                      <h3 class="h3sub">Advice</h3>
+                            <p>Código que se ejecutará cuando se llegue al pointcut este se puede definir de diferentes maneras. Existen tres tipos de advice:</p>
+                            <ul>
+                              <li>before()</li>
+                              <li>after()</li>
+                              <li>around()</li>
+                            </ul>
+
+                            <h4>Before</h4>
+                                <p>Se ejecuta  antes de cada join point.</p>
+                                <img src="assets/images/Before.png">
+                                <div class="highlight highlight-source-aspectj"><script src="https://gist.github.com/jsbecerrab/d0e82cce382b65f47bf03b4b75b55696.js"></script></div>
+
+                            <h4>After</h4>
+                                <p>Se ejecuta después de cada join point.
+                                  Puede de tres tipos:</p>
+
+                                <ul>
+                                  <li><b>Defecto:</b> el cual retorna sin importar el resultado.</li>
+                                  <img src="assets/images/After.png">
+                                  <li><b>Returning:</b> Me realiza la acción únicamente si finalizó correctamente y/o me retornó el valor (Este Advice también puede servir con JointPoints que sean voids). Este returning me permite también utilizar los valores retornados por los JoinPoints para utilizarlos en los advices.</li>
+                                  <img src="assets/images/AfterRet.png">
+                                  <li><b>Throwing:</b> Me realiza la acción únicamente si la acción del PointCut finalizó lanzando una acción o un resultado como una excepción.</li>
+                                  <img src="assets/images/AfterThrow.png">
+                                </ul>
+
+                                <div class="highlight highlight-source-aspectj"><script src="https://gist.github.com/jsbecerrab/9fedc1f65aba5b11413b2ca9e6c7ab11.js"></script></div>
+
+                            <h4>Around</h4>
+                                <p>Se ejecuta en lugar de el join point.
+                                  Debe ser declarado con un tipo de retorno.
+                                  <img src="assets/images/Around.png"></p>
+                                <p>El código del join point se puede ejecutar usando la palabra
+                                  <code>proceed();</code></p>
+                                <br>
+                                <img src="assets/images/AroundProceed.png">
+                                <br>
+                                <div class="highlight highlight-source-aspectj"><script src="https://gist.github.com/jsbecerrab/4bb16a1acef32187012dbb6d44612394.js"></script></div>
+
+                            <h4>Atributos de los advice</h4>
+
+                                <p><code>thisJoinPoint</code> : Representa el join point en el cual el advice se está ejecutando.
+                                  <code>thisJoinPointStaticPart</code> : equivalente a <code>thisJoinPoint.getStaticPart()</code> pero consume menos recursos.
+                                  <code>thisEnclosingJoinPointStaticPart</code> : la parte estatica de la dinamica que encierra el join point.</p>
+
+                      <h3 class="h3sub">Sintaxis de las notaciones</h3>
+
+                                  <h4>Aspect</h4>
+                                  <p><img src="https://raw.githubusercontent.com/seradiazpin/paradigmas-de-programacion/master/poa/tutorial/images/aspect.png" alt="aspect"></p>
+
+                                  <h4>PointCut</h4>
+                                  <p><img src="https://raw.githubusercontent.com/seradiazpin/paradigmas-de-programacion/master/poa/tutorial/images/pointcut.png" alt="pointcut"></p>
+
+                                  <h4>Advice before</h4>
+                                  <p><img src="https://raw.githubusercontent.com/seradiazpin/paradigmas-de-programacion/master/poa/tutorial/images/before.png" alt="before"></p>
+
+                                  <h4>Advice after</h4>
+                                  <p><img src="https://raw.githubusercontent.com/seradiazpin/paradigmas-de-programacion/master/poa/tutorial/images/after.png" alt="after"></p>
+
+                                  <h4>Advice around</h4>
+                                  <p><img src="https://raw.githubusercontent.com/seradiazpin/paradigmas-de-programacion/master/poa/tutorial/images/around.png" alt="aspect"></p>
+
+                      <h3 class="h3sub">Java 8</h3>
+                                  <h4>Streams </h4>
+                                  <p>Estos son nuevas abtracciones que nos permiten tener flujos de datos sobre los cuales aplicaremos diversas operaciones, ya sea desde filtros hasta operaciones complejas como implementar un Map-Reduce</p>
+                                  <div><script src="https://gist.github.com/jsbecerrab/284015e9dd458b198875b07d157e8d43.js"></script></div>
+                                  <p>En este caso dado un stream de lineas de texto <code>jm.getLines()</code> mapeamos cada linea como un mapa de la palabra y su frecuencia
+                                    para la reduccion o la operacion de agregacion usamos una expresion lambda que hace referencia a una interfaz funcional donde definimos la operacion
+                                    de agregacion: <code>(m1, m2) -> JavaMethods.fussion(m1, m2)</code> la cual fusiona 2 mapas en uno solo, finalmente imprimirmos
+                                    las llaves y valores encontrados usando el <code>forEach</code> de los mapas en vez de usar el tradicional <code>Entry&lt;K,V&gt;</code>
+                                  </p>
+                                  <p>muestra de la funcion Fussion</p>
+                                  <div><script src="https://gist.github.com/jsbecerrab/f86b12926c08710059f29d0a16935c14.js"></script></div>
+                                  <p>Observamos el uso de una interfaz funcional en <code>Long::sum</code> la cual llamamos haciendo uso del ::</p>
+                                  <h4>Muestra de Streams Infinitos</h4>
+                                  <div><script src="https://gist.github.com/jsbecerrab/1b8d56ada15ee405449e72060a404d49.js"></script></div>
+                                  <p>Para mas informacion consulta el siguiente <a class="pl-k" href="http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html">enlace</a></p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -230,6 +403,7 @@ https://templatemo.com/tm-529-ramayana
             <nav id="menu">
               <ul>
                 <li><a href="index.html">Homepage</a></li>
+                <li><a href="simple_page.html">simple page</a></li>
                 <li><a href="#compatibilidad">Compatibilidad</a></li>
                 <li><a href="#semantica">Semantica</a></li>
                 <li>
@@ -298,6 +472,18 @@ https://templatemo.com/tm-529-ramayana
     </div>
 
   <!-- Scripts -->
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function () {
+          this.classList.toggle("active");
+          this.nextElementSibling.classList.toggle("show");
+        }
+      }
+    </script>
+
   <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -307,6 +493,8 @@ https://templatemo.com/tm-529-ramayana
     <script src="assets/js/transition.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="https://github.com/kashif-umair/gist-embed/raw/master/gist-embed.js"></script>
+
 </body>
 
 
