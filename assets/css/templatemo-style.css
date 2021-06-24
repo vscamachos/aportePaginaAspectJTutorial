@@ -13,6 +13,10 @@ https://templatemo.com/tm-529-ramayana
 body {
 	font-family: 'Roboto Slab', sans-serif;
 }
+/* Gist */
+.gist {
+    font:100%/1 sans-serif;
+}
 
 /* Basic */
 
@@ -1245,6 +1249,7 @@ section.buttons .container-fluid {
 .owl-carousel button.active {
 	background-color: #535ba0!important;
 }
+
 
 
 /* Header */

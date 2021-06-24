@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+           
 
     <title>AspectJ tutoriall</title>
 
@@ -376,24 +377,380 @@ https://templatemo.com/tm-529-ramayana
 
             <!-- Right Image -->
             <section class="right-image">
+              <div id="Tutorial">
+                <h1 class="sub">Tutorial</h1>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="down-content">
+
+                    <p>A partir de una aplicación de un banco se desea implementar un Log de transacciones y un
+                      sistema de login mediante programación orientada a aspectos. Para esto se tienen las siguientes
+                      clases en las cuales se implementa la funcionalidad sencilla de un banco.</p>
+
+                    <div class="highlight highlight-source-java">
+                      <script src="https://gist.github.com/jsbecerrab/e1a300fe825a4e8c257d3f91536cabd4.js"></script>
+                    </div>
+
+                    <p>Adicionalmente se tiene la siguiente clase la cual representa a los usuarios de este banco.</p>
+
+                    <div class="highlight highlight-source-java">
+                      <script src="https://gist.github.com/jsbecerrab/6b1654e348fdad2f71eabb604018e6db.js"></script>
+                    </div>
+
+                    <h5>Aspectos</h5>
+
+                    <p>Se implementarán dos aspectos uno llamado <code>Login</code> y otro llamado <code>Log</code>.</p>
+
+                    <div class="highlight highlight-source-aspectj">
+                      <script src="https://gist.github.com/jsbecerrab/b43be6295b3ea0f1c59a93dae34ddc59.js"></script>
+                    </div>
+
+                    <div class="highlight highlight-source-aspectj">
+                      <script src="https://gist.github.com/jsbecerrab/c77934d0a1231bfd86ded72b1d8f3cb0.js"></script>
+                    </div>
+
+                    <p>Ahora debemos identificar los join points de nuestra aplicación para poder implementar
+                      los pointcuts en los aspectos.</p>
+
+                    <h5>Identificacion de los puntos de corte de los aspectos</h5>
+
+                    <div class="highlight highlight-source-java">
+                      <script src="https://gist.github.com/jsbecerrab/f19da61099b3be7dc9441dd6954bb4e6.js"></script>
+                    </div>
+
+                    <p>Esta es la funcionalidad que queremos guardar en el log de transacciones.</p>
+
+                    <div class="highlight highlight-source-java">
+                      <script src="https://gist.github.com/jsbecerrab/4e899863db1b62be0fef64a9c9e2aa1f.js"></script>
+                    </div>
+
+                    <p>Esta es la funcionalidad que queremos aplicarle un login.
+                      Aunque hay join point que son comunes por buena practica los viviremos en dos aspectos.</p>
+
+                    <div class="highlight highlight-source-aspectj">
+                      <script src="https://gist.github.com/jsbecerrab/6bcfe8399203aa74b9d559d23aaf9be1.js"></script>
+                    </div>
+
+                    <p>En el primer punto de corte queremos capturar los metodos que comiensen con make y my.</p>
+
+                    <div class="highlight highlight-source-aspectj">
+                      <script src="https://gist.github.com/jsbecerrab/a3125b71b3a1d1da76549c9b05628598.js"></script>
+                    </div>
+
+                    <p>Queremos capturar las distintos tipos de transacciones.
+                      Posteriormente agregamos los advices que queremos en los dos aspectos con su funcionalidad correspondiente.</p>
+
+                    <div class="highlight highlight-source-aspectj">
+                      <script src="https://gist.github.com/jsbecerrab/dbf1f2ee074dc0b0f1abeded609f2f4d.js"></script>
+                    </div>
+
+                    <p>Queremos que escribir el los se realice depues de que la transacción se haya realizado, por esta razón elegimos after.</p>
+
+                    <div class="highlight highlight-source-aspectj">
+                      <script src="https://gist.github.com/jsbecerrab/cf450ad990695db6acdf69856c970dba.js"></script>
+                    </div>
+
+                    <p>Queremos que el login sea antes de la transacción se haya realizado, por esta razón elegimos before.
+                      Este es un ejemplo muy sencillo de lo que nos permite aspectj.</p>
+
+                    <p>Finalmente este código nos agrega la funcionalidad de un login antes de las transacciones y un registro
+                      de sus actividades en un archivo.</p>
+
+
+                    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true">
+                      <h1 id="Tutorial-Sistema-de-inventario-con-log" data-id="Tutorial-Sistema-de-inventario-con-log">
+                        <a class="anchor hidden-xs" href="#Tutorial-Sistema-de-inventario-con-log" title="Tutorial-Sistema-de-inventario-con-log">
+                          <span class="octicon octicon-link"></span>
+                        </a><span>Tutorial: Sistema de inventario con log</span></h1>
+                      <p>
+                        <span>En este tutorial vamos a ver el paso a paso de cómo subir a la nube un servidor para el control
+                          de inventarios. Es una API Rest y se utiliza el entorno de trabajo Spring. Vamos a ver la estructura
+                          del proyecto, las clases y cómo subirlo a un nodo de AWS con Putty. También veremos cómo hacer peticiones
+                          al servidor mediante Postman.</span><br>
+                      <span>Para acceder y descargar el proyecto, ir al siguiente enlace </span>
+                      <a href="https://github.com/esgonzalezca/SpringLenguajes" target="_blank" rel="noopener">
+                        <span style="color:#33FDFF;" >https://github.com/esgonzalezca/SpringLenguajes</span>
+                      </a></p>
+                      <h3 id="Estructura-del-proyecto" data-id="Estructura-del-proyecto">
+                        <a class="anchor hidden-xs" href="#Estructura-del-proyecto" title="Estructura-del-proyecto">
+                          <span class="octicon octicon-link"></span>
+                        </a><span>Estructura del proyecto</span></h3><p>
+                      <img src="https://i.imgur.com/BMCBp8r.png" alt=""></p><p>
+                      <span>Entramos a src/main/java/com/spring/aop/api/</span></p><p>
+                      <img src="https://i.imgur.com/EXHUXQN.png" alt=""></p><p>
+                      <strong><span>Advice</span></strong></p><p>
+                      <span>Dentro de este directorio está la clase que contiene los pointcuts para
+                        la petición GET (myPointCutGet) y para la petición POST (myPointCutPost).
+                        Ambos son de tipo execution.</span><br>
+                      <span>Después están las dos funciones que se usarán para hacer los
+                        logs:applicationLoggerPost para las peticiones POST, donde se crea un
+                        ObjectMapper, se obtiene el nombre del método, el nombre de la clase y los
+                        argumentos para registrar la información en el log. Luego con pjp.proceed()
+                        se ejecuta el JoinPoint. Esta función tiene la anotación</span><br>
+                      <span>@Around porque reemplaza el código que está en el joinpoint</span><br>
+                      <span>La segunda función applicationLoggerGet cumple prácticamente la misma
+                        función de applicationLoggerPost pero como tiene la anotación @AfterReturning recibe el
+                        retorno del pointcut (myPointCutGet) en la variable redVal y luego hace el registro en el log.</span></p><p>
+                      <img src="https://i.imgur.com/Kc8l4yt.png" alt=""></p><p>
+                      <strong><span>Model</span></strong></p><p>
+                      <span>En la clase Product se describen los atributos de los productos que estarán en
+                        nuestro repositorio, los constructores, getters y setters.</span></p><p>
+                      <img src="https://i.imgur.com/4UObccG.png" alt=""></p><p>
+                      <strong><span>Service</span></strong></p><p>
+                      <span>En la clase ProductService se inicia la base de datos y se hacen las operaciones
+                        de consulta y adición de registros.</span></p><p>
+                      <img src="https://i.imgur.com/uICOdJi.png" alt=""></p><p>
+                      <strong><span>Controller</span></strong></p><p>
+                      <span>En la clase ProductController es donde se expone la información con REST, hay una
+                        petición POST (save) para guardar un producto o una lista de productos.</span><br>
+                      <span>La petición GET (findProducts) para obtener todos los productos en el sistema.</span><br>
+                      <span>En esta clase usamos la clase ProductService para acceder a la base de datos.</span></p><p>
+                      <img src="https://i.imgur.com/XFR7vuB.png" alt=""></p><p>
+                      <strong><span>Repository</span></strong></p><p>
+                      <span>La clase ProductRepository hereda de JpaRepository, hay que declarar la tabla con
+                        Producto y el tipo de dato de la llave primaria (Integer).</span></p><p>
+                      <img src="https://i.imgur.com/hSuIrCB.png" alt=""></p><p>
+                      <span>Y por último, fuera de los directorios vistos arriba, está la clase SpringAopApplication,
+                        donde está el método main para correr el servidor.</span></p><p>
+                      <img src="https://i.imgur.com/KcKPtIc.png" alt=""></p><h3 id="Creación-del-jar" data-id="Creación-del-jar">
+                      <a class="anchor hidden-xs" href="#Creación-del-jar" title="Creación-del-jar">
+                        <span class="octicon octicon-link"></span></a>
+                      <span>Creación del .jar</span></h3><p>
+                      <span>Usaremos el IDE Netbeans.</span></p><p>
+                      <img src="https://i.imgur.com/IQgcacM.png" alt=""></p><p>
+                      <span>En la parte superior de la pantalla haremos clic en el icono del Martillo con la escoba. Así se
+                        creará un archivo .jar con un nombre genérico (el cual se puede cambiar más adelante) en la carpeta “Target”
+                        de nuestro directorio del proyecto en local.</span></p>
+                      <h3 id="Creación-del-Dockerfile" data-id="Creación-del-Dockerfile">
+                        <a class="anchor hidden-xs" href="#Creación-del-Dockerfile" title="Creación-del-Dockerfile">
+                          <span class="octicon octicon-link"></span></a>
+                        <span>Creación del Dockerfile</span>
+                      </h3><p><span>Ahora crearemos un archivo llamado “Dockerfile” que no tendrá
+                      extensión y tendrá este contenido:</span></p><p>
+                      <img src="https://i.imgur.com/J102urS.png" alt=""></p><p>
+                      <span>Nótese que aquí “myService.jar” es como se debe llamar el archivo ejecutable
+                        de Java. Este archivo debe estar en la misma carpeta  del Dockerfile ya que será transportado a la
+                        carpeta /opt/app de nuestro entorno virtual (nodo de AWS). Recuerde que este archivo .jar fue generado
+                        al principio dentro de la carpeta target de nuestro proyecto en local.</span></p>
+                      <h3 id="Creación-del-nodo-EC2" data-id="Creación-del-nodo-EC2">
+                        <a class="anchor hidden-xs" href="#Creación-del-nodo-EC2" title="Creación-del-nodo-EC2">
+                          <span class="octicon octicon-link"></span></a>
+                        <span>Creación del nodo EC2</span></h3><p>
+                      <strong><span>Nota:</span></strong><span> Para esta sección se usó una máquina t2.micro de AWS
+                      (se puede acceder a una de estas máquinas con la capa gratuita de AWS).</span></p><p>
+                      <span>Vamos a la página de AWS </span>
+                      <a href="https://aws.amazon.com/" target="_blank" rel="noopener">
+                        <span style="color:#33FDFF"; >https://aws.amazon.com/</span>
+                      </a><span>, creamos una cuenta y accedemos a la consola.</span></p><p>
+                      <img src="https://i.imgur.com/G0YE5tK.png" alt=""></p><p><span>Vamos a la sección EC2</span>
+                    </p><p><img src="https://i.imgur.com/vU9yOpD.png" alt=""></p><p><span>Vamos a la sección instances
+                      y oprimimos Launch instance.</span></p><p>
+                      img src="https://i.imgur.com/LI3czvB.png" alt=""></p><p><span>Seleccionamos Amazon Linux 2 64 bits(X86)
+                      y luego en “Select”.</span></p><p><img src="https://i.imgur.com/6RHqykG.png" alt=""></p><p>
+                      <span>Seleccionamos la t2.micro.</span></p><p><img src="https://i.imgur.com/dY1ddmw.png" alt=""></p><p>
+                      <span>Luego hacemos click en “Review and Launch”.</span></p><p>
+                      <img src="https://i.imgur.com/3xL6plT.png" alt=""></p><p><span>Hacemos click en Launch. A
+                      continuación nos pedirá ingresar un nuevo valor de llave. Ingresamos los datos como sale a continuación.</span></p><p>
+                      <img src="https://i.imgur.com/Yfn57Dl.png" alt=""></p>
+                      <h3 id="Acceder-al-nodo-usando-Putty" data-id="Acceder-al-nodo-usando-Putty">
+                        <a class="anchor hidden-xs" href="#Acceder-al-nodo-usando-Putty" title="Acceder-al-nodo-usando-Putty">
+                          <span class="octicon octicon-link"></span></a><span>Acceder al nodo usando Putty</span></h3><p>
+                      <span>Ya con la llave del nodo, accedemos a él mediante Putty. Descargar en: </span>
+                      <a href="https://www.putty.org" target="_blank" rel="noopener">
+                        <span style="color:#33FDFF";>https://www.putty.org</span></a></p><p>
+                      <span>Interfaz inicial de Putty</span></p><p><img src="https://i.imgur.com/BFwTB4U.png" alt=""></p><p>
+                      <span>En el cuadro de Host Name ingresamos la IP del nodo del nodo que creamos unos pasos arriba. Para el
+                        caso de la exposición hecha en clase:</span></p><p><img src="https://i.imgur.com/m4Dbehx.png" alt="">
+                    </p><p><span>Luego vamos a la categoría SSH - Auth.</span></p><p>
+                      <img src="https://i.imgur.com/aS9x0bH.png" alt=""></p><p><span>En el campo Private key file for authentication
+                      ponemos la ruta de la llave del nodo de AWS. Luego regresamos a la categoría Session y oprimimos open.</span></p><p>
+                      <img src="https://i.imgur.com/Nx5Ewkf.png" alt=""></p><p><span>Accedemos con el usuario ec2-user (es el usuario por defecto).</span></p><p><img src="https://i.imgur.com/6BsM1HM.png" alt=""></p><p>
+                      <span>Desde esta ventana de comandos instalamos docker para hacer el contenedor para correr nuestra API.</span></p><p><img src="https://i.imgur.com/XVVP5jq.png" alt=""></p><p><span>Iniciamos docker.</span></p><p>
+                      <img src="https://i.imgur.com/2zn4FyO.png" alt=""></p><p><span>Luego vamos a la carpeta donde está el Dockerfile.</span></p><p>
+                      <span></span></p><p><img src="https://i.imgur.com/ZQYfSXB.png" alt=""></p><p><span>Construimos el contenedor.</span>
+                    </p><p><img src="https://i.imgur.com/6QpfkeW.png" alt=""></p><p>
+                      <span>Corremos el contenedor.</span></p><p><img src="https://i.imgur.com/1Fz9eSS.png" alt=""></p><p>
+                      <span>Ya está corriendo el servidor, debajo comenzarán a aparecer los logs.</span></p><p>
+                      <img src="https://i.imgur.com/M5VPMfU.png" alt=""></p>
+                      <h3 id="Peticiones-al-servidor-con-Postman" data-id="Peticiones-al-servidor-con-Postman">
+                        <a class="anchor hidden-xs" href="#Peticiones-al-servidor-con-Postman" title="Peticiones-al-servidor-con-Postman">
+                          <span class="octicon octicon-link"></span></a>
+                        <span>Peticiones al servidor con Postman</span>
+                      </h3><p><span>Enlace para descargar Postman: </span>
+                      <a href="https://www.postman.com/downloads/" target="_blank" rel="noopener">
+                        <span style="color:#33FDFF";>https://www.postman.com/downloads/</span></a></p><p>
+                      <span>Agregamos una nueva petición de tipo GET para obtener la lista de productos de nustro inventario.
+                        En la dirección escribimos la ip del nodo seguida por “:” el puerto “/” findProducts. Damos click a
+                        Send para enviar la petición al servidor.</span></p><p>
+                      <img src="https://i.imgur.com/JafDxOw.png" alt=""></p><p><span>Log del servidor.</span></p><p><img src="https://i.imgur.com/lbclRXb.png" alt=""></p><p><span>Ahora agregamos otra petición de tipo POST para agregar productos al inventario. Ingresamos la misma ruta cambiando lo que va depués del “/” por save. En la pestaña </span><em><span>Body</span></em><span> seleccionamos </span><em><span>raw</span></em><span> y </span><em><span>JSON</span></em><span> para escribir el cuerpo de la petición (los artículos que vamos a agregar). Enviamos la petición son </span><em><span>Send</span></em></p><p><img src="https://i.imgur.com/SmVZe9W.png" alt=""></p><p><span>Log del servidor</span></p><p><img src="https://i.imgur.com/UD20Vlb.png" alt=""></p><p><span>Luego hacemos otro GET para obtener la lista de productos actualizada.</span></p><p><img src="https://i.imgur.com/MC0SFb5.png" alt=""></p><p><span>Log del servidor</span><br>
+                      <img src="https://i.imgur.com/V8q2eOC.png" alt=""></p></div>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+            </section>
+            <!-- Top Image -->
+            <section class="top-image">
+              <div>
+                <h1 class="sub">Ejemplos</h1>
+              </div>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-md-6">
-                    <div class="left-content">
-                      <h4>Ante Interdum Raclette</h4>
-                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.<br><br>Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put bird brooklyn</p>
-                      <div class="primary-button">
-                        <a href="#">Read More</a>
-                      </div>
+                  <div class="col-md-12">
+                    <!-- img src="assets/images/HOW_IS_FORMED.png" alt=""-->
+                    <div class="down-content">
+                      <h4 id = "helloworld">Hello World</h4>
+                      <p>Ejemplo más sencillo de AspectJ.</p>
+                      <script src="https://gist.github.com/ejariasm/360ebce37e07ac720c05c2962fbdcc3c.js"></script>
+                      <h4 id = "clasetestasp">Clase TestAsp</h4>
+                      <p>La clase en la cual tenemos unos cuantos metodos y un main.</p>
+                      <script src="https://gist.github.com/jsbecerrab/2fb3b9a1a93000c377d095a922e41cff.js"></script>
+                      <h4 id = "aspectaspect">Aspect Aspect</h4>
+                      <p>Nuestro aspecto con algunos puntos de corte para ver su funcion.</p>
+                      <script src="https://gist.github.com/jsbecerrab/99b924d154c69f1e840b59af4bd120c6.js"></script>
+                      <h4 id = "comodines">Comodines</h4>
+                      <script src="https://gist.github.com/ejariasm/00bfd14d62b7e366e2a910e71a6c562f.js"></script>
+                      <h4 id = "callsyexecution">Calls y Execution</h4>
+                      <script src="https://gist.github.com/ejariasm/87b44157a293c8c72ec4cad282da328b.js"></script>
+                      <script src="https://gist.github.com/ejariasm/00bfd14d62b7e366e2a910e71a6c562f.js"></script>
+                      <h4 id = "callsvsexecution">Calls vs Execution</h4>
+                      <script src="https://gist.github.com/ejariasm/7f9c0189640343ce8911260535df87b6.js"></script>
+                      <h4 id = "contextpassing">Context Passing</h4>
+                      <script src="https://gist.github.com/ejariasm/53e2469cf1d7102971836da96db4e8ae.js"></script>
+                      <h4 id = "aspectbehaviours">Aspect Behaviours</h4>
+                      <script src="https://gist.github.com/ejariasm/2a85f9b5273e68c496ee1c72a4405372.js"></script>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <img src="assets/images/right-image.jpg" alt="">
                   </div>
                 </div>
               </div>
             </section>
 
+            <!-- Top Image -->
+            <section class="top-image">
+              <div id="ventajasDesventajas">
+                <h1 class="sub">Ventajas y Desventajas</h1>
+              </div>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+
+                    <div class="down-content">
+                      <!-- Inicio Ventajas -->
+                      <h4>Ventajas </h4>
+                      <ul>
+                        <li>Facilita/mejora la modularidad de los desarrollos de software.</li>
+                        <li>El código es organizado y comprimido</li>
+                        <li>Es reutilizable</li>
+                        <li>Añade constructores a Java que permiten la implementación modular de crosscutting concerns</li>
+                        <li>Permite modelar referencias transversales, extiende las capacidades de POO\</li>
+                      </ul>
+                      <!-- Fin Ventajas -->
+
+                      <!-- Inicio desventajas -->
+                      <h4> Desventajas</h4>
+                      <ul>
+                        <li>Puede introducir nuevos errores y fallas de seguridad si no se implementa adecuadamente</li>
+                        <li>El paradigma puede emplearse mal quitando y/o delegando responsabilidades a ciertas clases</li>
+                        <li>Los Aspectos pueden ser mal utilizados. Un programador puede implementar una falsa funcionalidad en cualquier estado del desarrollo y afectar a un amplio rango del sistema.</li>
+                      </ul>
+                      <!-- Fin desventajas -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Top Image -->
+            <section class="top-image">
+              <div id="contribuidores">
+                <h1 class="sub">Contribudores</h1>
+              </div>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+
+                    <div class="down-content">
+                      <h4>2016-1</h4>
+                      <ul>
+                        <li>Sergio Alejandro Diaz Pinilla</li>
+                        <li>Pedro Luis Monroy Garces</li>
+                        <li>Jefferson Javier Hernández Panqueba</li>
+                      </ul>
+                      <h4>2016-2</h4>
+                      <ul>
+                        <li>Juan Rodriguez Duran</li>
+                        <li>Johann Triana Olaya</li>
+                        <li>Jonatan Parra Toro</li>
+                      </ul>
+                      <h4>2017-1</h4>
+                      <ul>
+                        <li>Juan Sebastián Martínez Beltrán</li>
+                        <li>Andrés Felipe Sánchez Lemus</li>
+                      </ul>
+                      <h4>2019-2</h4>
+                      <ul>
+                        <li>Juan Sebastián Becerra Barcenas</li>
+                        <li>Juan Sebastián Peña Quintero</li>
+                        <li>Brayan David Vega Triana</li>
+                      </ul>
+                      <h4>2020-1</h4>
+                      <ul>
+                        <li>Andres Esteban Romero Romero	</li>
+                        <li>Oscar Andres Mancera Garzón</li>
+                        <li><b>Y</b>erson Andres <b>V</b>alderrama Ceron <b></b></li>
+                      </ul>
+                      <h4>2020-2</h4>
+                      <ul>
+                        <li>Sergio Esteban González Cárdenas</li>
+                        <li>Elsa Johanna Arias Muñoz</li>
+                        <li>Nicolás Alejandro Contreras</li>
+                        <li>Hubert Alejandro Tovar Strubinger</li>
+                      </ul>
+                      <h4>2021-1</h4>
+                      <ul>
+                        <li>Verbo Sebastián Camacho Silva</li>
+                        <li>Miguel Alejandro Peña Hurtado</li>
+                        <li>Diego Fernando Pastás</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Top Image -->
+            <section class="top-image">
+              <div id="bibliografia">
+                <h1 class="sub">Bibliografía</h1>
+              </div>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+
+                    <div class="down-content">
+                      <ul>
+                        <li>Libro: Mariano Lorente López, Fernando Asteasuain, Bernardo Ezequiel Contreras. (2005). Programemos en AspectJ.</li>
+                        <li>https://sistemasacademico.uniandes.edu.co/~miso4204/dokuwiki/lib/exe/fetch.php?media=temas:aspectj.pdf</li>
+                        <li>http://ldc.usb.ve/~yudith/docencia/ci-4822/presentacionPOA.pdf</li>
+                        <li>https://es.wikipedia.org/wiki/AspectJ</li>
+                        <li>https://eclipse.org/aspectj/</li>
+                        <li>Constantinides, C. (2015). V Aspect-Oriented Programming with AspectJ. En Principles of Programming Languages (págs. 309-407). Montreal: Concordia University.</li>
+                        <li>eclipse. (Abril de 2020). The AspectJ Language. Obtenido de The AspectJ Programming Guide: https://www.eclipse.org/aspectj/doc/released/progguide/language-joinPoints.html</li>
+                        <li>Fernández Egido, A. (Junio de 2009). CORE. Obtenido de CONFLICTOS ENTRE ASPECTOS EN LA PROGRAMACIÓN ORIENTADA A ASPECTOS : https://core.ac.uk/download/pdf/29400487.pdf</li>
+                        <li>IBM. (1 de Enero de 2002). IBM. Obtenido de Improve modularity with aspect-oriented programming: https://www.ibm.com/developerworks/library/j-aspectj/index.html</li>
+                        <li>Laiseca Manso, X. (2007 de Julio de 27). MORElab. Obtenido de Cursillo 2007: http://e-ghost.deusto.es/docs/2007/cursillos/aop/curso_aop.pdf</li>
+                        <li>Lorente Lopez, M., Asteasuain, F., & Contreras, E. B. (2005). Programemos en AspectJ. programemos.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </section>
           </div>
         </div>
 
@@ -425,7 +782,19 @@ https://templatemo.com/tm-529-ramayana
                     <li><a href="#java8">Java 8</a></li>
                   </ul>
                 </li>
-                <li><a href="#ejemplos">Ejemplos</a></li>
+                <li>
+                  <span class="opener" href ="#ejemplos">Ejemplos</span>
+                  <ul>
+                    <li><a href="#helloworld">Hello World</a></li>
+                    <li><a href="#clasetestasp">Clase TestAsp</a></li>
+                    <li><a href="#aspectaspect">Aspect Aspect</a></li>
+                    <li><a href="#comodines">Comodines</a></li>
+                    <li><a href="#callsyexecution">Calls y Execution</a></li>
+                    <li><a href="#callsvsexecution">Calls vs Execution</a></li>
+                    <li><a href="#contextpassing">Context Passing</a></li>
+                    <li><a href="#aspectbehaviours">Aspect Behaviours</a></li>
+                  </ul>
+                </li>
                 <li><a href="#tutoriales">Tutoriales</a></li>
                 <li><a href="#ventajasDesventajas">Ventajas y Desventajas</a></li>
                 <li><a href="#contribuidores">Contribudores</a></li>
@@ -494,9 +863,9 @@ https://templatemo.com/tm-529-ramayana
     </script>
 
   <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://github.com/kashif-umair/gist-embed/raw/master/gist-embed.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/transition.js"></script>
