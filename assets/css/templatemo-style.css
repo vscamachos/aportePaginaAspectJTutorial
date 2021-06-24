@@ -1037,7 +1037,7 @@ section.buttons .container-fluid {
     line-height: 100px;
     outline: 0;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     text-align: center;
     text-indent: 100px;
     top: 0;
@@ -1060,7 +1060,7 @@ section.buttons .container-fluid {
     height: inherit;
     left: 0;
     line-height: inherit;
-    position: absolute;
+    position: fixed;
     text-indent: 0;
     top: 0;
     width: inherit;
@@ -1085,6 +1085,7 @@ section.buttons .container-fluid {
     }
     #sidebar .toggle:before {
         font-size: 24px;
+        position: fixed;
     }
     #sidebar.inactive {
         margin-left: -380px;
