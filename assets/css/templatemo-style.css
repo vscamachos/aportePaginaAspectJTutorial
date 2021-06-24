@@ -1060,7 +1060,8 @@ section.buttons .container-fluid {
     height: inherit;
     left: 0;
     line-height: inherit;
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     text-indent: 0;
     top: 0;
     width: inherit;
@@ -1073,6 +1074,7 @@ section.buttons .container-fluid {
 @media screen and (max-width: 1680px) {
     #sidebar {
         width: 380px;
+        z-index: 10000;
     }
     #sidebar > .inner {
         padding: 0px 30px;
@@ -1085,6 +1087,8 @@ section.buttons .container-fluid {
     }
     #sidebar .toggle:before {
         font-size: 24px;
+        position: fixed;
+        z-index: 100;
     }
     #sidebar.inactive {
         margin-left: -380px;
